@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FrituurFriedas">
+    <output-path>$PROJECT_DIR$/out/artifacts/FrituurFriedas</output-path>
+    <root id="archive" name="FrituurFriedas.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="FrituurFrieda" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="FrituurFrieda/web/Web" />
+    </root>
+  </artifact>
+</component>
