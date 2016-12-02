@@ -54,8 +54,8 @@ public class SausRadenServlet extends HttpServlet {
 	
 	private static boolean isSausFound(char[] dotted) {
 		int hits = 0;
-		for(int i = 0; i < dotted.length;i++) {
-			if(dotted[i] == '.') hits++;
+		for (char aDotted : dotted) {
+			if (aDotted == '.') hits++;
 		}
 		return hits == 0;
 	}
@@ -68,7 +68,7 @@ public class SausRadenServlet extends HttpServlet {
 		if(request.getParameter("nieuwBtn") != null) {
 			initSpelSession(session);
 		}
-		if(request.getParameter("radenBtn") != null) {
+		if(request.getParameter("radenBtn") != null && request.getParameter("letterfield") != null) {
 			int hits = 0;
 			char letter = request.getParameter("letterField").charAt(0);
 			char[] dotted = (char[]) session.getAttribute("dotted");

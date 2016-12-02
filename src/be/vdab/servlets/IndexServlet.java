@@ -21,17 +21,6 @@ public class IndexServlet extends HttpServlet {
 	private final Adres adres = new Adres();
 	private final Gemeente gemeente = new Gemeente();
 
-    /**
-     * Default constructor. 
-     * @return 
-     */
-    public void init() throws ServletException {
-    	adres.setStraat(this.getInitParameter("straat"));
-		adres.setHuisNr(this.getInitParameter("huisnummer"));
-		gemeente.setNaam(this.getInitParameter("gemeente"));
-		gemeente.setPostCode(Integer.parseInt(this.getInitParameter("postcode")));
-		adres.setGemeente(gemeente);
-    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +29,6 @@ public class IndexServlet extends HttpServlet {
 		int dag = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 		String openGesloten = (dag == Calendar.MONDAY || dag == Calendar.THURSDAY) ? "gesloten" : "open";
 
-		request.setAttribute("adres", adres);
 		request.setAttribute("openGesloten", openGesloten);
 		request.getRequestDispatcher(VIEW).forward(request, response);
 	}
