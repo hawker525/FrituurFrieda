@@ -84,7 +84,7 @@ public class SausRadenServlet extends HttpServlet {
 			session.setAttribute("dotted", dotted);
 			session.setAttribute("saus", saus);
 		}
-		doGet(request, response);
+		response.sendRedirect(response.encodeRedirectURL(request.getRequestURI()));
 	}
 
 }

@@ -14,7 +14,7 @@ import be.vdab.entities.Gemeente;
 /**
  * Servlet implementation class IndexServlet
  */
-@WebServlet(urlPatterns="/index.html", name="indexservlet")
+@WebServlet(urlPatterns="/index.htm", name="indexservlet")
 public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String VIEW = "/WEB-INF/JSP/index.jsp";
