@@ -1,4 +1,4 @@
-package be.vdab.be.vdab.listeners; /**
+package be.vdab.be.listeners; /**
  * Created by maarten on 12/2/16.
  */
 
