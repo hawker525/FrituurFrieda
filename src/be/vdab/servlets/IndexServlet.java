@@ -28,6 +28,8 @@ public class IndexServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int dag = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 		String openGesloten = (dag == Calendar.MONDAY || dag == Calendar.THURSDAY) ? "gesloten" : "open";
+		request.setAttribute("nu", Calendar.getInstance().getTime());
+		request.setAttribute("aantalFrietenVerkocht", 23000);
 
 		request.setAttribute("openGesloten", openGesloten);
 		request.getRequestDispatcher(VIEW).forward(request, response);
